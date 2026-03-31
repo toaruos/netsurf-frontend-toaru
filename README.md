@@ -14,3 +14,14 @@ build of `libiconv` is preferred over a dynamic one, which may interact poorly w
 
 This frontend is based, in part, on the **File Browser** application in ToaruOS, which provided the
 template for the navigation elements.
+
+## Missing Functionality
+
+This frontend can render most pages but is lacking some integrations.
+
+- The star button on the nav bar does nothing. It should create bookmarks in the future.
+- Some argument and option handling is missing.
+- There is no clipboard integration.
+- Not all keyboard keys are sent to Netsurf for processing. This particular affects special keys.
+- There's no support for tabs or multiple windows, despite those theoretically being possible.
+- Path plotting is not available, but it is also missing from the framebuffer frontend so that's probably fine?
