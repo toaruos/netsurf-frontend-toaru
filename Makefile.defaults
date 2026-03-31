@@ -1,0 +1,26 @@
+# ----------------------------------------------------------------------------
+# Whatever
+# ----------------------------------------------------------------------------
+
+# Optimisation levels
+CFLAGS += -O2
+
+# Use libharu to enable PDF export and GTK printing support.
+# Valid options: YES, NO
+NETSURF_USE_HARU_PDF := NO
+
+# Enable NetSurf's use of libsvgtiny for displaying SVGs
+# Valid options: YES, NO, AUTO
+NETSURF_USE_NSSVG := AUTO
+
+# Enable NetSurf's use of librosprite for displaying RISC OS Sprites
+# Valid options: YES, NO, AUTO
+NETSURF_USE_ROSPRITE := NO
+
+# Default binary install path
+NETSURF_TOARU_BIN := $(PREFIX)/bin
+
+# Default resource install path
+NETSURF_TOARU_RESOURCES := $(PREFIX)/share/netsurf
+
+
