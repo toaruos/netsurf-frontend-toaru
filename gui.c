@@ -418,7 +418,10 @@ static nserror toaru_plot_arc(const struct redraw_context *ctx, const plot_style
 }
 
 static nserror toaru_plot_disc(const struct redraw_context *ctx, const plot_style_t *style, int x, int y, int radius) {
-	fprintf(stderr, "plot disc TDOO\n");
+	gfx_context_t * gctx = clip_context ? clip_context : ctx->priv;
+
+	draw_rounded_rectangle(gctx, x - radius - clip_x, y - radius - clip_y, radius * 2, radius * 2, radius,
+		convert_ns_color(style->fill_colour));
 	return NSERROR_OK;
 }
 
