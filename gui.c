@@ -290,11 +290,11 @@ static void redraw_placeholder(struct gui_window *gw) {
 
 	browser_window_redraw(gw->bw, -gw->scroll_x, -gw->scroll_y, &clip, &ctrx);
 	if (gw->caret_h) {
-		draw_line(gw->ctx,
-			gw->caret_x + gw->viewport_x,
-			gw->caret_x + gw->viewport_x,
-			gw->caret_y + gw->viewport_y,
-			gw->caret_y + gw->viewport_y + gw->caret_h, rgb(0,0,0));
+		draw_line(sub,
+			gw->caret_x - gw->scroll_x,
+			gw->caret_x - gw->scroll_x,
+			gw->caret_y - gw->scroll_y,
+			gw->caret_y - gw->scroll_y + gw->caret_h, rgb(0,0,0));
 	}
 
 	free(sub);
